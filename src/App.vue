@@ -1,5 +1,3 @@
 <template>
-	<app-layout>
-		<router-view />
-	</app-layout>
+	<router-view></router-view>
 </template>

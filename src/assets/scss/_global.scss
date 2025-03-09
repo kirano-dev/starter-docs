@@ -1,0 +1,37 @@
+@use "vars" as *;
+
+body {
+	padding: 100px 0;
+	background: $bg;
+	color: $text;
+	line-height: 150%;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: Montserrat, sans-serif;
+	scroll-margin: 50px;
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+.hljs {
+	background: transparent !important;
+	padding: 0 !important;
+}
+
+.wrapper {
+	display: flex;
+	gap: 30px;
+	
+	&__body {
+		flex: 1;
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	body {
+		font-size: 13px;
+	}
+}

@@ -31,6 +31,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
+        additionalData: '@use "@/assets/scss/_vars.scss" as *;',
         api: 'modern-compiler',
       }
     }

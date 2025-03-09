@@ -1,7 +1,12 @@
 export default [
 	{
 		path: '/',
-		name: 'home',
-		component: () => import('@views/home.vue'),
+		name: 'nuxt',
+		component: () => import('@views/nuxt.vue'),
+	},
+	{
+		path: '/vue',
+		name: 'vue',
+		component: () => import('@views/vue.vue'),
 	},
  ]
