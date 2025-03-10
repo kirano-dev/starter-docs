@@ -74,4 +74,10 @@ defineProps({
 		}
 	}
 }
+
+@media screen and (max-width: 1050px) {
+	.accent__copy {
+		display: none;
+	}
+}
 </style>

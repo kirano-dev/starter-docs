@@ -9,6 +9,7 @@ body {
 	font-weight: 500;
 	font-family: Montserrat, sans-serif;
 	scroll-margin: 50px;
+	word-break: break-word;
 }
 
 p {
@@ -32,6 +33,12 @@ p {
 @media screen and (max-width: 1050px) {
 	body {
 		font-size: 13px;
+	}
+	
+	.wrapper {
+		&__body {
+			width: 100%;
+		}
 	}
 }
 
