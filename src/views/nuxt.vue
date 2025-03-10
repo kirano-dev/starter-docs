@@ -272,10 +272,10 @@
 					<code-line>const { $repositories } = useNuxtApp()</code-line>
 					<code-next />
 					<code-line>const handleSubmit = async () => {</code-line>
-					<code-line tab>await $repositories.applies.submit(formData)</code-line>
+					<code-line :tab="1">await $repositories.applies.submit(formData)</code-line>
 					<code-next />
-					<code-line tab>showSuccessModal()</code-line>
-					<code-line tab>clearFormData()</code-line>
+					<code-line :tab="1">showSuccessModal()</code-line>
+					<code-line :tab="1">clearFormData()</code-line>
 					<code-line>}</code-line>
 				</shared-code>
 			</sections-default>

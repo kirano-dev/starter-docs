@@ -9,4 +9,9 @@ export default [
 		name: 'vue',
 		component: () => import('@views/vue.vue'),
 	},
+	{
+		path: '/laravel',
+		name: 'laravel',
+		component: () => import('@views/laravel.vue'),
+	},
  ]

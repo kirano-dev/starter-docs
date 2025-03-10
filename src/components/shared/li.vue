@@ -1,9 +1,16 @@
 <script setup>
-
+	defineProps({
+		tab: Boolean,
+	})
 </script>
 
 <template>
-	<div class="li"><slot></slot></div>
+	<div :class="{
+		li: true,
+		li_tab: tab,
+	}">
+		<slot></slot>
+	</div>
 </template>
 
 <style scoped lang="scss">
@@ -11,6 +18,10 @@
 		position: relative;
 		padding-left: 20px;
 		margin-bottom: 10px;
+		
+		&.li_tab {
+			margin-left: 30px;
+		}
 		
 		&::before {
 			content: '';

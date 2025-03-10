@@ -3,21 +3,39 @@ import BurgerIcon from '@icons/burger.svg?raw'
 import TimesIcon from '@icons/times.svg?raw'
 import NuxtIcon from '@icons/nuxt.svg?raw'
 import VueIcon from '@icons/vue.svg?raw'
+import LaravelIcon from '@icons/laravel.svg?raw'
 import Intersection from "@/stores/Intersection.js";
 import {useRoute} from "vue-router";
 
 const route = useRoute()
 
-const items = [
-	{ id: 'start', label: 'Разворачивание проекта' },
-	{ id: 'file-structure', label: 'Файловая структура' },
-	{ id: 'naming', label: 'Нейминг' },
-	{ id: 'import', label: 'Импорт' },
-	{ id: 'formats', label: 'Форматы' },
-	{ id: 'rules', label: 'Общие правила' },
-	{ id: 'repository-pattern', label: 'Паттерн репозиториев' },
-	{ id: 'dependencies', label: 'Использование сторонних зависимостей' },
-]
+const items = computed(() => ({
+	vue: [
+		{ id: 'start', label: 'Разворачивание проекта' },
+		{ id: 'file-structure', label: 'Файловая структура' },
+		{ id: 'naming', label: 'Нейминг' },
+		{ id: 'import', label: 'Импорт' },
+		{ id: 'formats', label: 'Форматы' },
+		{ id: 'rules', label: 'Общие правила' },
+		{ id: 'repository-pattern', label: 'Паттерн репозиториев' },
+		{ id: 'dependencies', label: 'Использование сторонних зависимостей' },
+	],
+	nuxt: [
+		{ id: 'start', label: 'Разворачивание проекта' },
+		{ id: 'file-structure', label: 'Файловая структура' },
+		{ id: 'naming', label: 'Нейминг' },
+		{ id: 'import', label: 'Импорт' },
+		{ id: 'formats', label: 'Форматы' },
+		{ id: 'rules', label: 'Общие правила' },
+		{ id: 'repository-pattern', label: 'Паттерн репозиториев' },
+		{ id: 'dependencies', label: 'Использование сторонних зависимостей' },
+	],
+	laravel: [
+		{ id: 'media', label: 'Работа с медиа' },
+		{ id: 'sms', label: 'Работа с СМС информированием' },
+		{ id: 'payment', label: 'Работа с платежными системами' },
+	]
+}[route.name]))
 
 const isOpen = ref(false)
 
@@ -36,6 +54,9 @@ const handleToggle = () => isOpen.value = !isOpen.value
 			</router-link>
 			<router-link to="vue" :class="{templates__item: true, templates__item_active: route.name === 'vue'}">
 				<i v-html="VueIcon"></i> Vue
+			</router-link>
+			<router-link to="laravel" :class="{templates__item: true, templates__item_active: route.name === 'laravel'}">
+				<i v-html="LaravelIcon"></i> Laravel
 			</router-link>
 		</div>
 		<a
@@ -121,9 +142,10 @@ const handleToggle = () => isOpen.value = !isOpen.value
 	}
 	
 	.templates {
-		display: flex;
+		display: grid;
 		gap: 5px;
 		margin-bottom: 15px;
+		grid-template-columns: repeat(2, 1fr);
 		
 		&__item {
 			display: flex;
@@ -140,6 +162,10 @@ const handleToggle = () => isOpen.value = !isOpen.value
 			border: 2px solid transparent;
 			text-decoration: none;
 			color: $text;
+			
+			&:nth-child(odd):last-child {
+				grid-column: span 2;
+			}
 			
 			&:hover {
 				background: #434343;

@@ -17,6 +17,7 @@ import Node from "@/components/shared/node.vue";
 import hljs from 'highlight.js/lib/core';
 import bash from 'highlight.js/lib/languages/bash';
 import javascript from 'highlight.js/lib/languages/javascript';
+import php from 'highlight.js/lib/languages/php';
 import xml from 'highlight.js/lib/languages/xml';
 import 'highlight.js/styles/atom-one-dark-reasonable.min.css';
 import {autoAnimatePlugin} from "@formkit/auto-animate/vue";
@@ -27,6 +28,7 @@ const app = createApp(App)
 
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('php', php);
 hljs.registerLanguage('bash', bash);
 
 app.use(autoAnimatePlugin)
