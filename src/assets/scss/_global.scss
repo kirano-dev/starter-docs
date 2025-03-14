@@ -12,6 +12,23 @@ body {
 	word-break: break-word;
 }
 
+.modals {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	pointer-events: none;
+	transition: .2s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	&:has(.modal) {
+		pointer-events: auto;
+		background: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(10px);
+	}
+}
+
 p {
 	margin-bottom: 15px;
 }

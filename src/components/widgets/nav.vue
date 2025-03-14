@@ -18,6 +18,7 @@ const items = computed(() => ({
 		{ id: 'formats', label: 'Форматы' },
 		{ id: 'rules', label: 'Общие правила' },
 		{ id: 'repository-pattern', label: 'Паттерн репозиториев' },
+		{ id: 'dry', label: 'DRY' },
 		{ id: 'dependencies', label: 'Использование сторонних зависимостей' },
 	],
 	nuxt: [
@@ -28,6 +29,7 @@ const items = computed(() => ({
 		{ id: 'formats', label: 'Форматы' },
 		{ id: 'rules', label: 'Общие правила' },
 		{ id: 'repository-pattern', label: 'Паттерн репозиториев' },
+		{ id: 'dry', label: 'DRY' },
 		{ id: 'dependencies', label: 'Использование сторонних зависимостей' },
 	],
 	laravel: [
@@ -172,7 +174,7 @@ const handleToggle = () => isOpen.value = !isOpen.value
 			}
 			
 			&.templates__item_active {
-				border-color: $text;
+				background: #434343;
 			}
 			
 			i {

@@ -4,9 +4,9 @@
 		<div class="wrapper__body">
 			<sections-default title="Разворачивание проекта" id="start">
 				<p>Для быстрого развертывания нового проекта мы используем npm пакет <accent link="https://www.npmjs.com/package/@kirano/starter">@kirano/starter</accent>. Его необходимо установить глобально, и это делается лишь 1 раз:</p>
-				<shared-code>npm i -g @kirano/starter</shared-code>
+				<shared-code>npm i -g <accent>@kirano/starter</accent></shared-code>
 				<p>Далее в директории, где хотим развернуть проект, пишем:</p>
-				<shared-code>kirano create:nuxt app</shared-code>
+				<shared-code>kirano create:<accent>nuxt</accent> <folder>app</folder></shared-code>
 				<p>Здесь <accent>app</accent> — название проекта</p>
 				<p>На этом разворчание готово.</p>
 			</sections-default>
@@ -210,12 +210,12 @@
 			</sections-default>
 			<sections-default title="Нейминг" id="naming">
 				<shared-li>Все страницы и компоненты в нижнем регистре, <accent>kebab-case</accent></shared-li>
-				<shared-li>Хуки в <accent>camel-case</accent>, с префиксом <accent>use</accent>. Пример: <accent>use</accent>RepositoryData, <accent>use</accent>RepositorySingle</shared-li>
+				<shared-li>Хуки в <accent>camelCase</accent>, с префиксом <accent>use</accent>. Пример: <accent>use</accent>RepositoryData, <accent>use</accent>RepositorySingle</shared-li>
 				<shared-li>Использование компонентов в коде в <accent>kebab-case</accent>. Пример: sections-hero, shared-button</shared-li>
-				<shared-li>Локальные функции компонентов / страниц, завязанные на события — с префиксом <accent>handle</accent>, а также в <accent>camel-case</accent>. Пример: <accent>handle</accent>Submit, <accent>handle</accent>Open</shared-li>
+				<shared-li>Локальные функции компонентов / страниц, завязанные на события — с префиксом <accent>handle</accent>, а также в <accent>camelCase</accent>. Пример: <accent>handle</accent>Submit, <accent>handle</accent>Open</shared-li>
 			</sections-default>
 			<sections-default title="Импорт" id="import">
-				<shared-li>Ипорт иконок в <accent>camel-case</accent>, с постфиксом <accent>Icon</accent>. Пример: Star<accent>Icon</accent>, Times<accent>Icon</accent></shared-li>
+				<shared-li>Ипорт иконок в <accent>camelCase</accent>, с постфиксом <accent>Icon</accent>. Пример: Star<accent>Icon</accent>, Times<accent>Icon</accent></shared-li>
 				<shared-li>Ипорт компонентов в nuxt автоматический, основанный на файловой структуре, в связи с чем <important>не желательно</important> импортировать компоненты вручную. Пример: sections-hero, shared-button</shared-li>
 				<shared-li>Ипорт composable в nuxt автоматический, в связи с чем <important>не желательно</important> импортировать composable вручную. Пример: useRepositoryData, useRepositorySingle</shared-li>
 				<shared-li>Ипорт utils в nuxt автоматический, в связи с чем <important>не желательно</important> импортировать utils вручную.</shared-li>

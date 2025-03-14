@@ -23,6 +23,7 @@ import 'highlight.js/styles/atom-one-dark-reasonable.min.css';
 import {autoAnimatePlugin} from "@formkit/auto-animate/vue";
 import router from "@/router/index.js";
 import hljsVuePlugin from "@highlightjs/vue-plugin";
+import Modal from "@/components/shared/modal.vue";
 
 const app = createApp(App)
 
@@ -46,5 +47,6 @@ app.component('code-line', CodeLine)
 app.component('code-next', CodeNext)
 app.component('sections-default', Default)
 app.component('widgets-nav', Nav)
+app.component('shared-modal', Modal)
 
 app.mount('#app')

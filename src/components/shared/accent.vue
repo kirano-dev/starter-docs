@@ -15,6 +15,7 @@ const handleCopy = () => {
 defineProps({
 	link: String,
 	copy: Boolean,
+	internal: Boolean,
 })
 </script>
 
@@ -24,7 +25,7 @@ defineProps({
 		accent_link: link,
 		accent_copy: copy,
 		accent_copied: isCopied,
-	}" :href="link" target="_blank" ref="copyRef" @click="handleCopy">
+	}" :href="link" :target="internal ? '_self' : '_blank'" ref="copyRef" @click="handleCopy">
 		<slot></slot>
 		<div v-if="copy" class="accent__copy">
 			<i :v-auto-animate="{ duration: 300 }" v-html="isCopied ? CheckIcon : CopyIcon"></i>
