@@ -10,6 +10,13 @@
 				<p>Здесь <accent>app</accent> — название проекта</p>
 				<p>На этом разворчание готово.</p>
 			</sections-default>
+			<sections-default title="Этапы работы над проектом" id="stages">
+				<shared-li>1. <accent>Дизайн ревью</accent>. Просмотр всего дизайна, оценка объема работы, обсуждение с дизайнером прототипа работы сайта</shared-li>
+				<shared-li>2. <accent>Верстка</accent>. В нее входит так же адаптив и проверка своего кода</shared-li>
+				<shared-li>3. <accent>Проверка и правки</accent>.</shared-li>
+				<shared-li>4. <accent>Интеграция с API</accent>.</shared-li>
+				<shared-li>5. <accent>Конечные правки</accent>. Завершающий этап, после него проект деплоится и отдается клиенту</shared-li>
+			</sections-default>
 			<sections-default title="Файловая структура" id="file-structure">
 				<node
 					name="assets"
@@ -278,6 +285,9 @@
 					<code-line :tab="1">clearFormData()</code-line>
 					<code-line>}</code-line>
 				</shared-code>
+			</sections-default>
+			<sections-default title="DRY" id="dry">
+				<p><important>DRY</important> (Do not repeat yourself) - <important>Не повторяйся</important>. Правило, которое говорит само за себя. Если вы видите у себя в коде, что какие - то компоненты очень похожи друг на друга, значит, что - то вы делаете не так</p>
 			</sections-default>
 			<sections-default title="Использование сторонних зависимостей" id="dependencies">
 				<shared-li>Для мультиязычности — <accent link="https://nuxt.com/modules/nuxt-i18n-micro">nuxt-i18n-micro</accent></shared-li>

@@ -10,6 +10,13 @@
 				<p>Здесь <accent>app</accent> — название проекта</p>
 				<p>На этом разворчание готово.</p>
 			</sections-default>
+			<sections-default title="Этапы работы над проектом" id="stages">
+				<shared-li>1. <accent>Дизайн ревью</accent>. Просмотр всего дизайна, оценка объема работы, обсуждение с дизайнером прототипа работы сайта</shared-li>
+				<shared-li>2. <accent>Верстка</accent>. В нее входит так же адаптив и проверка своего кода</shared-li>
+				<shared-li>3. <accent>Проверка и правки</accent>.</shared-li>
+				<shared-li>4. <accent>Интеграция с API</accent>.</shared-li>
+				<shared-li>5. <accent>Конечные правки</accent>. Завершающий этап, после него проект деплоится и отдается клиенту</shared-li>
+			</sections-default>
 			<sections-default title="Файловая структура" id="file-structure">
 				<node
 					name="public"

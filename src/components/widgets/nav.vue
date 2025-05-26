@@ -12,6 +12,7 @@ const route = useRoute()
 const items = computed(() => ({
 	vue: [
 		{ id: 'start', label: 'Разворачивание проекта' },
+		{ id: 'stages', label: 'Этапы работы над проектом' },
 		{ id: 'file-structure', label: 'Файловая структура' },
 		{ id: 'naming', label: 'Нейминг' },
 		{ id: 'import', label: 'Импорт' },
@@ -23,6 +24,7 @@ const items = computed(() => ({
 	],
 	nuxt: [
 		{ id: 'start', label: 'Разворачивание проекта' },
+		{ id: 'stages', label: 'Этапы работы над проектом' },
 		{ id: 'file-structure', label: 'Файловая структура' },
 		{ id: 'naming', label: 'Нейминг' },
 		{ id: 'import', label: 'Импорт' },
